@@ -28,7 +28,16 @@ public class GenreController {
     @Autowired
     private GenreCrudService service;
     
-    @RequestMapping(value="modifier_genre",method=RequestMethod.POST)
+    
+    @RequestMapping(value="/ajouter_genre",method = RequestMethod.GET)
+    public String ajouter(Model model){
+        
+        model.addAttribute("nouveauGenre", new Genre());
+        return "ajouter_genre.jsp";
+    }
+    
+    
+    @RequestMapping(value="/modifier_genre",method=RequestMethod.POST)
     public String modifierPOST(@ModelAttribute("genreAct")Genre genre){
         
         service.save(genre);

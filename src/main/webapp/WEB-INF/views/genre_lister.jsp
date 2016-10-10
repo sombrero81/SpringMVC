@@ -6,6 +6,9 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -25,9 +28,11 @@
                 
                 <a href="supprimer_genre/${monGenre.id}">Supprimer</a>
                 <a href="modifier_genre/${monGenre.id}">Editer</a>
+                
+                <a href="<spring:url value="/ajouter_genre"/>">Ajouter genre </a>
                 <br>
             </c:forEach> 
         </div>
 
     </body>
-</html>
+</html> 
