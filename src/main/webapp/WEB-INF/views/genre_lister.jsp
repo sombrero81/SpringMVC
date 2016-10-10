@@ -22,6 +22,9 @@
 
                 iteration
                 ${monGenre.nom}
+                
+                <a href="supprimer_genre/${monGenre.id}">Supprimer</a>
+                <a href="modifier_genre/${monGenre.id}">Editer</a>
                 <br>
             </c:forEach> 
         </div>

@@ -14,5 +14,7 @@
     <body>
         <h1>Bienvenue à la Home page</h1>
         <h1>${titre}</h1>
+        <h1><a href="liste_genres">liste des genres </a></h1>
+        
     </body>
 </html>
