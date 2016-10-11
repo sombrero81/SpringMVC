@@ -5,6 +5,7 @@
  */
 package streaming.service;
 
+import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 import streaming.entity.Film;
 
@@ -13,5 +14,7 @@ import streaming.entity.Film;
  * @author tom
  */
 public interface FilmCrudService extends CrudRepository<Film, Long>{
+    
+    public List<Film> findAllByOrderByTitreAsc (String t);
     
 }

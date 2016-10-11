@@ -1,8 +1,10 @@
 <%-- 
-    Document   : genre_lister
-    Created on : 10 oct. 2016, 11:03:01
+    Document   : film_lister
+    Created on : 11 oct. 2016, 10:07:00
     Author     : admin
 --%>
+
+
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -17,24 +19,27 @@
     </head>
     <body>
         
-        <a href="<spring:url value="/ajouter_genre"/>">Ajouter genre </a>
-        <br>
-        <h1>liste des genres</h1>
         
+        <a href="<spring:url value="/ajouter_film"/>">Ajouter film </a>
+        <br>
+        
+        <br>
+        <h1>Gestion des films</h1>
         
         <div>
-            <c:forEach items="${mesGenres}" var="monGenre">
+            <c:forEach items="${mesfilms}" var="monfilm">
 
                 iteration
-                ${monGenre.nom}
+                ${monfilm.titre}
                 
-                <a href="supprimer_genre/${monGenre.id}">Supprimer</a>
-                <a href="modifier_genre/${monGenre.id}">Editer</a>
+                <a href="supprimer_film/${monfilm.id}">Supprimer</a>
+                <a href="modifier_film/${monfilm.id}">Editer</a>
                 
                 
                 <br>
             </c:forEach> 
         </div>
-
+        
+        
     </body>
-</html> 
+</html>

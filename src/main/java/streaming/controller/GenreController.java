@@ -28,6 +28,19 @@ public class GenreController {
     @Autowired
     private GenreCrudService service;
     
+    //il faut faire un st nom sur lobjet qu on binde
+    @RequestMapping(value = "/ajouter_genre",method = RequestMethod.POST)
+    public String ajoutPOST(@ModelAttribute("nouveauGenre") Genre genre){
+        
+        //persiste genre
+        service.save(genre);
+        
+        //redirect  liste des genres
+        return "redirect:/liste_genres";
+        
+    }
+            
+            
     
     @RequestMapping(value="/ajouter_genre",method = RequestMethod.GET)
     public String ajouter(Model model){
