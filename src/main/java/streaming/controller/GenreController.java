@@ -74,7 +74,7 @@ public class GenreController {
     
     //le controlleur renvoit touj du string
     //on cree une fonction lister
-    @RequestMapping(value={"/liste_genres","/"},method = RequestMethod.GET)
+    @RequestMapping(value={"/liste_genres"},method = RequestMethod.GET)
     public String lister(Model model){
         
        model.addAttribute("mesGenres", service.findAll());  
